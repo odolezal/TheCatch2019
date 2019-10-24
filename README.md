@@ -14,7 +14,7 @@ Tento rok se bude bojovat proti vzbouřeným strojům. Kdo zachrání svět? Kdo
 Hráno pod nickem: ```Ondrashack``` od 7.10.2019. Kontakt: [www.odolezal.cz](https://odolezal.cz).
 
 
-**Stav k 21.10.2019 (konec soutěže)**: vyřešeno 10 úloh (22 bodů). 129. místo z 617 soutěžících.
+**Stav k 21.10.2019 (konec soutěže)**: vyřešeno 10 úloh (22 bodů). 132. místo z 617 soutěžících.
 
 Intro
 ---
@@ -41,7 +41,8 @@ Twosome
 >Hi Cadet, >this is just mental warm-up, do not expect any medals! Decode the message, go go go!
 
 
-Obsah souboru ```message.bin``` je binární kód:
+Obsah souboru [message.bin](Twosome/message.bin) je binární kód:
+
 
 ```1000110 1001100 1000001 1000111 1111011 1110010 1111010 1110111 1100001 101101 1110000 110010 1010000 1111001 101101 111001 110110 1010010 1111001 101101 1000110 1100100 1011010 1010101 1111101```
 
@@ -57,7 +58,8 @@ Octopus
 **Zadání:**
 >Hi Cadet, >this is just mental warm-up, do not expect any medals! Decode the message, go go go!
 
-Opět se jedná o převod mezi soustavami znaků, v tomto případě soubor ```message.oct``` obsahuje [osmičkovou soustavu](https://cs.wikipedia.org/wiki/Osmi%C4%8Dkov%C3%A1_soustava), 
+Opět se jedná o převod mezi soustavami znaků, v tomto případě soubor [message.oct](Octopus/message.oct) obsahuje [osmičkovou soustavu](https://cs.wikipedia.org/wiki/Osmi%C4%8Dkov%C3%A1_soustava), 
+
 
 ```106 114 101 107 173 172 125 113 171 55 65 161 156 112 55 160 67 114 104 55 63 146 151 164 175```
 
@@ -73,7 +75,7 @@ Foxtrot is the maximum
 **Zadání:**
 >Hi Cadet, >this is just mental warm-up, do not expect any medals! Decode the message, go go go!
 
-Soubor ```message.hex``` obsahuje hexadecimální kód: 
+Soubor [message.hex](Foxtrot_is_the_maximum/message.hex) obsahuje hexadecimální kód:
 
 ```46 4c 41 47 7b 38 4d 56 58 2d 4c 68 38 6d 2d 74 4d 4d 49 2d 4b 38 73 69 7d```
 
@@ -89,7 +91,7 @@ Textual data
 **Zadání:**
 >Hi Cadet, >this is just mental warm-up, do not expect any medals! Decode the message, go go go!
 
-Soubor ```message.b64``` obsahuje text zakódovaný pomocí [Base64](https://cs.wikipedia.org/wiki/Base64), 
+Soubor [message.b64](Textual_data/message.b64) obsahuje text zakódovaný pomocí [Base64](https://cs.wikipedia.org/wiki/Base64), 
 
 ```RkxBR3tTNXJyLXJDeHQtYW1ZWS03WDQ2fQ==```
 
@@ -120,7 +122,7 @@ Autonomous car
 >Hi Commander, the police has reported an abandoned autonomous car about 25 km away from the charging station. Our field team has arrived and performed an analysis on site. The car was rebellious one, but fortunately, its batteries were completely discharged (maybe the car relied on the officially announced driving range). The navigation system contains a lot of waypoints at different locations in big Czech cities, but there is nothing important located at given coordinates. Analyse the coordinates and find out what is going on. Good luck.
 
 
-V souboru ```autonomous_car.gps``` je seznam GPS souřadnic na území ČR na kterých bylo viděno autonomní "zlé" auto:
+V souboru [autonomous_car.gps](Autonomous_car/autonomous_car.gps) je seznam GPS souřadnic na území ČR na kterých bylo viděno autonomní "zlé" auto:
 
 ```
 50.0927061N, 14.3605981E
@@ -174,7 +176,7 @@ Ice-cream selling machine
 >Hi Commander, our reconnaissance teams have discovered one of rebellious self-aware machine outside the library and identified it as smart ice-cream selling machine. It has some technical difficulties (we assume that the machine just has run out of ice cream) and started to call for help. Our wiretapping team has captured part of one attempt and we are sure that it contains special rescue code and we want it. Analyse the trafic and acquire the code. Good luck!
 
 
-Máme zachycenou komunikaci nepřátelského stroje na zmrzlinu (:D), který se dostal do technických potíží a údajně odesílá jistou speciální zprávu, která nás má zajímat. Soubor ```ice-cream_selling_machine.pcap``` otevřeme ve Wiresharku a analyzujeme zachycené pakety.
+Máme zachycenou komunikaci nepřátelského stroje na zmrzlinu (:D), který se dostal do technických potíží a údajně odesílá jistou speciální zprávu, která nás má zajímat. Soubor [ice-cream_selling_machine.pcap](Ice-cream_selling_machine/ice-cream_selling_machine.pcap) otevřeme ve Wiresharku a analyzujeme zachycené pakety.
 
 Zběžné prohlédnutí komunikace odhaluje velké množství RTP paketů.
 > Real-time Transport Protocol (nebo **RTP**) je protokol standardizující paketové doručování zvukových a obrazových (video) dat po internetu. _Zdroj:_ [_cs.wikipedia.org_](<https://cs.wikipedia.org/wiki/Real-time_Transport_Protocol>)
@@ -199,7 +201,7 @@ Payment Terminal
 "Rebelující" platební terminál se snaží v síti rozšířit vlastní konfiguraci do síťových prvků a tak je ovládnout. 
 Náš monitorující systém zachytil komunikaci a domníváme se, že je zde jistá bezpečnostní "díra", kterou lze využít.
 
-Soubor ```payment_terminal.pcap``` otevřeme ve Wiresharku. Hledáme cokoli spojeného s přenosem konfigurace (resp. souborů, které konfiguraci obsahují). Záhy je odhaleno velké množství paketů protokolu TFTP.
+Soubor [payment_terminal.pcap](Payment_Terminal/payment_terminal.pcap) otevřeme ve Wiresharku. Hledáme cokoli spojeného s přenosem konfigurace (resp. souborů, které konfiguraci obsahují). Záhy je odhaleno velké množství paketů protokolu TFTP.
 
 >Trivial File Transfer Protocol (**TFTP**) je velice jednoduchý protokol pro přenos souborů, obsahující jen základní funkce protokolu FTP... 
 >Kvůli **nedostatečnému zabezpečení** je nebezpečné používat tento protokol k výměně dat přes internet, používá se výhradně v lokálních sítích, kde nehrozí takové nebezpečí zcizení nebo poškození dat. _Zdroj:_ [_cs.wikipedia.org_](<https://cs.wikipedia.org/wiki/Trivial_File_Transfer_Protocol>)
@@ -227,7 +229,7 @@ tacacs-server key 7 0804545A1B18360300040203641B256C770272010355
 !
 end
 ```
-(kompletní konfigurace v souboru ```router-r12-confg```)
+(kompletní konfigurace v souboru [router-r12-confg](Payment_Terminal/router-r12-confg))
 
 Zde je možné si všimnout slibně vypadajícího hashe:
 
@@ -302,7 +304,7 @@ Vacuum cleaner
 **Zadání:**
 > Hi Commander, one of rebellious smart robotic vacuum cleaner has been seen near the library. Our reconnaissance team was able to capture part of wireless communication between the vacuum cleaner and the main computer via rebellious wireless network. Analyse the captured traffic and find out the intentions of the vacuum cleaner(s). Good luck!
 
-Došlo na nejhorší a už proti nám bojuje i chytrý vysavač připojený na vzbouřeneckou Wi-Fi. Naštěstí se našemu týmu podařilo odchytnout bezdrátovou komunikaci s hlavním počítačem a uložit ji do souboru ```vacuum_cleaner.pcap```.
+Došlo na nejhorší a už proti nám bojuje i chytrý vysavač připojený na vzbouřeneckou Wi-Fi. Naštěstí se našemu týmu podařilo odchytnout bezdrátovou komunikaci s hlavním počítačem a uložit ji do souboru [vacuum_cleaner.pcap](Vacuum_cleaner/vacuum_cleaner.pcap).
 
 _Tato úloha byla opravdu sranda, hlavně proto, že jsem vůbec netušil kde začít. Zde bych chtěl poděkovat [Šimonovi Podlesnemu](<https://twitter.com/spodlesny>) za nasměrování správným směrem, protože jinak bych ten zpropadený vysavač hackoval až do konce věků (a stejně bych na to nepřišel :)._
 
@@ -444,7 +446,9 @@ Drone flight
 > Hi Commander, we have intercepted a message, which has been addressed to a rebellious supersonic drone in laboratory of one famous Czech university and it contains B-1084 START. The drone has already taken off and now it is beening monitored by our ground radar network. The achieved GPS coordinates have been recorded down, but it looks like purely random flight. You have to analyse the coordinates and find the hidden sense of this activity. Good luck!
 
 
-V souboru ```drone_flight.gps``` jsou uvedeny souřadnice letu dronu. Např. web <https://www.gpsvisualizer.com> umí tyto souřadnice spojit a vytvoří tak trasu ve které je ukryt FLAG. Některé znaky nejsou na první pohled zcela jednoznačné, takže to chce trochu představivosti při čtení v mapě.
+V souboru [drone_flight.gps](Drone_flight/drone_flight.gps) jsou uvedeny souřadnice letu dronu. Např. web <https://www.gpsvisualizer.com> umí tyto souřadnice spojit a vytvoří tak trasu ve které je ukryt FLAG. Některé znaky nejsou na první pohled zcela jednoznačné, takže to chce trochu představivosti při čtení v mapě.
+
+Řešení je v souboru: [drone_flight.jpg](Drone_flight/drone_flight.jpg)
 
 ```FLAG{70Q3-d8yW-9aeT-VZIV}```
 
@@ -456,7 +460,7 @@ Seventh element
 **Zadání:**
 > Hi Commander, thanks to your discovery of the drone as a false target, our radars could concentrate on the detection of the second drone. This one was classic quadcopter and our trained falcon has caught it up and took it off the sky. The last broadcast was Seventh element down, malfunction due claws and beak in propellers. The wreck has been completely shattered and just one operational flash drive has been rescued from the crashsite. According to the intelligence, we believe that the drone was ordered to transport some coded message to the elementary school library in city of Ostrava in order to create backup uprising centre. You have to analyse the content of the drive and decode the message. Good luck!
 
-Soubor ke stáhnutí (16.2 MB): ```seventh_element.dd.gz```
+Soubor ke stáhnutí (16.2 MB): [seventh_element.dd.gz](Seventh_element/seventh_element.dd.gz)
 
 **NEVYŘEŠENO**
 
@@ -556,13 +560,13 @@ A to jsem ještě nezmínil časový limit 2 sekundy na vyhodnocení sady slov a
 
 Při využití ```cURL``` je implementace následující (zdroj: <https://makandracards.com/makandra/48262-how-to-use-cookies-with-curl>):
 
-Nejprve zavoláme URL webu se sadou slov a uložíme si cookie do souboru ```cookies.txt```: 
+Nejprve zavoláme URL webu se sadou slov a uložíme si cookie do souboru [cookies.txt](Who_am_I/cookies.txt): 
 
 ```curl -L -c "cookies.txt" "http://challenges.thecatch.cz/c2619b989b7ae5eaf6df8047e6893405"```
 
 (```-L``` kvůli redirectu na straně serveru)
 
-Soubor ```cookies.txt``` pro představu vypadá následovně:
+Soubor [cookies.txt](Who_am_I/cookies.txt) pro představu vypadá následovně:
 
 ```
 # Netscape HTTP Cookie File
@@ -577,7 +581,7 @@ Nyní opět ```cURLem``` pošleme odpověď s již dříve uloženou cookie:
 
 Nyní se asi ptáte, jak zjistit správnou odpověď na vygenerovanou kombinaci slov. Noo.. vypadá to jako hromada práce s parsováním webu a posíláním zpátky správného klíče podle slovníku. Co takhle zkusit cestu bruteforce? Máme 8 slov ke kterým patří 8 hodnot ```0``` nebo ```1```. Nevíme pořadí slov a tedy ani správné hodnoty. Ale víme, že teoreticky je zde 256 možností a jedna z nich je určitě ta správná kombinace.
 
-Po nějaké době zkoušení, googlení a nadávání se mi podařilo sepsat hodně primitivní skript (viz též ```requests-ng.sh```), který ale dělá to co má:
+Po nějaké době zkoušení, googlení a nadávání se mi podařilo sepsat hodně primitivní skript (viz též [requests-ng.sh](Who_am_I/requests-ng.sh)), který ale dělá to co má:
 
 ```
 #!/bin/bash
@@ -595,7 +599,7 @@ for X in {0..1}{0..1}{0..1}{0..1}{0..1}{0..1}{0..1}{0..1}
 done
 ```
 
-Některé řádky a "konstrukce" jsou tam čistě pro debug. Spuštění se provede standardně, s výpisem do logu pro pozdější nalezení FLAGu: 
+Některé řádky a "konstrukce" jsou tam čistě pro debug. Spuštění se provede standardně, s výpisem do [logu](Who_am_I/requests-ng.sh.log) pro pozdější nalezení FLAGu: 
 
 ```bash requests-ng.sh > requests-ng.sh.log```
 
